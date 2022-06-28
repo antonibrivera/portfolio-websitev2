@@ -1,12 +1,14 @@
 import React from 'react';
 import './Home.css';
+import workspace from '../../assets/workspace-min.png';
 
 export default function Home(props) {
   return (
     <div>
       <main className='hero-section'>
-        <h1 id='hero-title'>Joseph Rivera | Software Developer</h1>
-        <h3 id='hero-subtitle'>Dedicating to growing in my career and being better than I was yesterday.</h3>
+        <img src={workspace} alt='Illustration of desk with chair and computer' />
+        <h1 id='hero-title'>Hi there, I'm Joseph!</h1>
+        <h3 id='hero-subtitle'>I'm a Full-Stack Software Developer based in Miami, FL with a love for developing applications that are easy to use and scale!</h3>
       </main>
       <section className='about-section'>
         <h2 id='about-title'>Who am I?</h2>

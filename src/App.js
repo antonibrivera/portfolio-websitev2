@@ -10,11 +10,11 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route exact path='/' element={<Home />} />
-        {/* <Route path='/resume' element={<Resume />} />
-        <Route path='*' element={<NotFound />} /> */}
+        <Route path='/resume' element={<Resume />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );

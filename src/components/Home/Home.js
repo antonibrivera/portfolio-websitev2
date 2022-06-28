@@ -6,9 +6,11 @@ export default function Home(props) {
   return (
     <div>
       <main className='hero-section'>
+        <div className='hero-text'>
+          <h1 id='hero-title'>Hi there, I'm Joseph!</h1>
+          <h3 id='hero-subtitle'>I'm a Full-Stack Software Developer based in Miami, FL with a love for developing applications that are easy to use and scale!</h3>
+        </div>
         <img src={workspace} alt='Illustration of desk with chair and computer' />
-        <h1 id='hero-title'>Hi there, I'm Joseph!</h1>
-        <h3 id='hero-subtitle'>I'm a Full-Stack Software Developer based in Miami, FL with a love for developing applications that are easy to use and scale!</h3>
       </main>
       <section className='about-section'>
         <h2 id='about-title'>Who am I?</h2>

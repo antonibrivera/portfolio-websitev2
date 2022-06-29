@@ -16,6 +16,11 @@
   border-radius: 5px;
 }
 
+.navbar a:hover {
+  cursor: pointer;
+  background-color: cornsilk;
+}
+
 #tagline {
   position: absolute;
   left: 50px;

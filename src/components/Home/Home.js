@@ -1,8 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import workspace from '../../assets/workspace-min.png';
+import Project from '../ProjectItem/ProjectItem';
+import database from '../../database';
 
 export default function Home(props) {
+
+  const generateProjectElement = (projects) => {
+    const projectsArray = projects.map(project => {
+      return <Project
+        key={project.id}
+        id={project.id}
+        title={project.title}
+        img={project.img}
+        body={project.body}
+        technologies={project.technologies}
+        liveLink={project.liveLink}
+        repoLink={project.repoLink}   
+      />
+    })
+    return projectsArray;
+  }
+
   return (
     <div>
       <main className='hero-section'>
@@ -14,13 +34,32 @@ export default function Home(props) {
       </main>
       <section className='about-section'>
         <h2 id='about-title'>Who am I?</h2>
-        <p id='about-description'>Lorem ipsum dolor sit amet.</p>
+        <p id='about-description'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+          in culpa qui officia deserunt mollit anim id est laborum.
+        <br />
+        <br />
+        Learn
+        </p>
+        <Link to='/resume'>
+          <a href='/resume' id='about-cta-btn'>View Resume</a>
+        </Link>
       </section>
       <section className='projects-section'>
-        <h2 id='projects-title'>Projects</h2>
-        <ul id='projects-list'>
-          ...
-        </ul>
+        <div className='projects-text'>
+          <h2 id='projects-title'>Projects</h2>
+          <p id='projects-description'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <section id='projects-list'>
+          {generateProjectElement(database)}
+        </section>
       </section>
       <section className='contact-section'>
         <h2 id='contact-title'>Want to get in touch?</h2>
